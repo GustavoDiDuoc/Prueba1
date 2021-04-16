@@ -1,10 +1,21 @@
+/*Inicio Navegacion */
+*{
+  font-family: 'Zen Dots', cursive;
+}
+
+.navbar > a{
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+
 img {
   width: 100%;
   height: 300px;
 }
 #container-seccion1 {
   padding: 20px;
-  border: 5px solid black;
+  /*border: 5px solid black;*/
 }
 
 #container-seccion1 .col-sm {
@@ -19,4 +30,42 @@ img {
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
+}
+
+nav ul {
+	list-style:none;
+}
+
+nav > ul {
+	display:table;
+	/*Quitamos el overflow hidden que estaba aqui*/
+	width:100%;
+	background:#000;
+	position:relative;
+}
+
+nav > ul li {
+	display:table-cell;
+}
+/*Sub-menu*/
+
+nav > ul > li:hover > ul {
+	display:block;
+	height:100%;
+}
+
+/*Sub-menu configurando que este escondido y al pasar sea visualizado*/
+nav > ul > li > ul {
+	display:block;
+	position:absolute;
+	background:#000;
+	left:0;
+	right:0;
+	overflow:hidden;
+	height:0%;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
 }
